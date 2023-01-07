@@ -1,0 +1,19 @@
+.button {
+	background: transparent;
+	border: 1px solid #ccc;
+	padding: 6px 10px;
+	cursor: pointer;
+	border-radius: 8px;
+	transition: all 0.3s;
+}
+.button:hover {
+	border-color: #fff;
+	background: #1677ff;
+	color: #fff;
+}
+.icon {
+	position: relative;
+	bottom: -1px;
+	margin-right: 4px;
+}
+
