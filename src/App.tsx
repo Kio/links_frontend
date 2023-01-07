@@ -1,10 +1,13 @@
 import React from 'react';
+import Router from "./routes";
+import {ApolloProvider} from "@apollo/client";
+import {client} from "./apollo/init";
 
-function App() {
+const App = (): JSX.Element => {
 	return (
-		<div>
-			Links project
-		</div>
+		<ApolloProvider client={client}>
+			<Router/>
+		</ApolloProvider>
 	);
 }
 

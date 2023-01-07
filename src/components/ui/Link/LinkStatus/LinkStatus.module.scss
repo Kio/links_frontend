@@ -1,0 +1,18 @@
+.status {
+	margin-right: 10px;
+	width: 10px;
+	height: 10px;
+	border-radius: 100%;
+}
+.success {
+	background: #52c41a;
+}
+.running {
+	background: #ffec3d;
+}
+.failure {
+	background: #f5222d;
+}
+.not_existed {
+	background: #1f1f1f;
+}
