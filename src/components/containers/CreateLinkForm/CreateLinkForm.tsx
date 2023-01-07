@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import TextInput from "../../ui/Inputs/TextInput/TextInput";
 import Button from "../../ui/General/Button/Button";
-import Title from "../../ui/General/Title/Title.module";
+import Title from "../../ui/General/Title/Title";
 import Space from "../../ui/General/Space/Space";
 import {useCreateLink} from "../../../apollo/hooks/links";
 import {isValidUrl} from "../../../utils/validators";

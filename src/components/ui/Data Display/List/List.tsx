@@ -10,7 +10,7 @@ type ListProps = {
     renderItem: (item: any) => React.ReactNode
 }
 
-const Alert = (props: ListProps): JSX.Element => {
+const List = (props: ListProps): JSX.Element => {
     const { data, renderItem } = props
     return (<ul className={styles.container}>
         {data.map((item) =>
@@ -24,4 +24,4 @@ const Alert = (props: ListProps): JSX.Element => {
     </ul>)
 }
 
-export default memo(Alert)
+export default memo(List)

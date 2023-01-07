@@ -1,9 +1,9 @@
 import React from 'react';
-import {useLink, useLinks} from "../../apollo/hooks/links";
+import {useLink} from "../../apollo/hooks/links";
 import {useParams} from "react-router-dom";
 import Spin from "../../components/ui/Feedback/Spin/Spin";
 import Alert from "../../components/ui/Feedback/Alert/Alert";
-import Title from "../../components/ui/General/Title/Title.module";
+import Title from "../../components/ui/General/Title/Title";
 import LinkStatus from "../../components/ui/Link/LinkStatus/LinkStatus";
 import LinkContainedLinksTable from "../../components/ui/Data Display/LinkContainedLinksTable/LinkContainedLinksTable";
 import HomeButton from "../../components/ui/Navigation/HomeButton/HomeButton";
