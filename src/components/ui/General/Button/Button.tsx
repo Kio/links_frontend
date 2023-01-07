@@ -3,16 +3,19 @@ import styles from "./Button.module.scss"
 
 type ButtonProps = {
     children: React.ReactNode
-    icon: React.ReactNode
+    icon?: React.ReactNode
+    onClick?: () => void
+    loading?: boolean
 }
 
 const Button: ForwardRefRenderFunction<HTMLButtonElement, ButtonProps> = (props, ref) => {
-    const { children, icon, ...other_props } = props
+    const { children, icon, loading=false, ...other_props } = props
     return (
         <button
             ref={ref}
-            {...other_props}
             className={styles.button}
+            {...other_props}
+            disabled={loading}
         >
             {icon &&
                 <span className={styles.icon}>

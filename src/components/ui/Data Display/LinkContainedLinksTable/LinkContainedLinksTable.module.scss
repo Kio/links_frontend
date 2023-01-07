@@ -15,6 +15,10 @@
 }
 .item a {
 	margin-left: 8px;
+	text-overflow: ellipsis;
+	max-width: calc(100% - 45px);
+	overflow: hidden;
+	white-space: nowrap;
 }
 .container {
 	&::-webkit-scrollbar {

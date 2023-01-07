@@ -1,5 +1,5 @@
-import {useLazyQuery, gql, ApolloError} from '@apollo/client';
-import {useEffect} from "react";
+import {useLazyQuery, gql, ApolloError, useMutation} from '@apollo/client';
+import {useCallback, useEffect} from "react";
 import {StatusType} from "../../components/ui/Link/LinkStatus/LinkStatus";
 
 export type LinkType = {
@@ -76,4 +76,27 @@ export const useLink = (props: UseLinkProps): UseLinkReturnType => {
     }, [data?.link.status, stopPolling])
     
     return {data, loading, error}
+}
+
+const CREATE_LINK = gql`
+    mutation createLink($url: String!) {
+        createLink(url: $url) {
+            id
+        }
+    }
+`;
+
+type UseCreateLinkReturnType = {
+    createLink: (url: string) => Promise<any>
+    loading: boolean
+}
+
+export const useCreateLink = (): UseCreateLinkReturnType => {
+    const [createLinkMutation, {loading}] = useMutation(CREATE_LINK, {
+		refetchQueries: [{query: QUERY_LINKS}]
+	})
+    const createLink = useCallback((url: string) => {
+        return createLinkMutation({variables: {url: url}})
+    }, [createLinkMutation])
+    return { createLink, loading }
 }

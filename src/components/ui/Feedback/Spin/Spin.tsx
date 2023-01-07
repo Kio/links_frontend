@@ -1,9 +1,13 @@
 import React from 'react';
 import styles from "./Spin.module.scss";
 
-const Spin = () => {
-    return (<div className={styles.container}>
+import {ReactComponent as Icon} from "./SpinIcon.svg";
 
+const Spin = (): JSX.Element => {
+    return (<div className={styles.container}>
+        <div className={styles.spin}>
+            <Icon/>
+        </div>
     </div>)
 }
 

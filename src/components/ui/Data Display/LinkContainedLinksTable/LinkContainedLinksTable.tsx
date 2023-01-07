@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./LinkContainedLinksTable.module.scss";
-import { FixedSizeList as List } from "react-window";
+import {FixedSizeList as List} from "react-window";
 
 type LinkContainedLinksTableProps = {
     links: string[]
@@ -10,9 +10,9 @@ const LinkContainedLinksTable = (props: LinkContainedLinksTableProps): JSX.Eleme
     const { links } = props;
     // eslint-disable-next-line @typescript-eslint/ban-ts-comment
     // @ts-ignore
-    const renderRow = ({ index, key, style }) => (
+    const renderRow = ({ index, style }) => (
         <div
-            key={key}
+            key={links[index]}
             style={style}
             className={styles.item}
         >

@@ -1,5 +1,5 @@
-import React, {useCallback} from 'react';
-import {LinkType, useLinks} from "../../../apollo/hooks/links";
+import React from 'react';
+import {useLinks} from "../../../apollo/hooks/links";
 import Spin from "../../ui/Feedback/Spin/Spin";
 import Alert from "../../ui/Feedback/Alert/Alert";
 import List from "../../ui/Data Display/List/List";
